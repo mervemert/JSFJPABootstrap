@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:f="http://java.sun.com/jsf/core">
+     
+    <h:head>
+        <title>Books</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="js/bootstrap.min.js"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    </h:head>
+    <h:body> 
+       <div class="container">
+           <h2>Book List</h2>
+            <h:form id="form">
+                
+                <h:dataTable value="#{bookController.bookList}" var="books" rendered="#{not empty bookController}"
+                             styleClass="table table-striped table-bordered">
+                    <h:column>
+                        <f:facet name="header">Name</f:facet>
+                        #{books.name}
+                    </h:column>
+                     <h:column>
+                        <f:facet name="header">ISBN</f:facet>
+                        #{books.isbn}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">AUTHOR</f:facet>
+                        #{books.authors}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">PUBLISHER</f:facet>
+                        #{books.publishers}
+                    </h:column>
+                    
+                 
+             </h:dataTable>
+                <div class="form-group">  
+                     <div class="col-sm-2">
+                        <h:commandButton type="submit" class="btn btn-default"
+                                         value="Back" action="admin"/>
+                    </div>
+                </div>
+            </h:form>
+       </div>
+    </h:body>
+</html>

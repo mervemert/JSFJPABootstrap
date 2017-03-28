@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Book Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="js/bootstrap.min.js"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    </h:head>
+   <h:body>
+        <h:form styleClass="form-horizontal">
+            
+            <!-- BOOK INFORMATION -->
+            <div class="form-group">
+                <h:outputLabel value="Book Name :" class="control-label col-sm-2"/>
+                <div class="col-sm-4">
+                    <h:inputText value="#{bookController.name}" styleClass="form-control"/>
+                </div>
+            </div>
+             <div class="form-group">
+                <h:outputLabel value="ISBN :" class="control-label col-sm-2"/>
+                <div class="col-sm-4">
+                    <h:inputText value="#{bookController.isbn}" styleClass="form-control"/>
+                </div>
+            </div>
+          
+             <div class="form-group">              
+                <h:outputLabel class="control-label col-sm-2" for="add"/>
+                <div class="col-sm-4">
+                    <h:commandButton type="submit" class="btn btn-info"
+                                     value="Add Book" action="#{bookController.addBook()}"/>
+                </div>
+            </div>
+            <!-- AUTHOR INFORMATION -->
+             <div class="form-group">
+                <h:outputLabel value="Author Name :" class="control-label col-sm-2"/>
+                <div class="col-sm-4">
+                    <h:inputText value="#{authorController.name}" styleClass="form-control"/>
+                </div>
+            </div>
+             <div class="form-group">
+                <h:outputLabel value="Author Surname :" class="control-label col-sm-2"/>
+                <div class="col-sm-4">
+                    <h:inputText value="#{authorController.surname}" styleClass="form-control"/>
+                </div>
+            </div>
+             <div class="form-group">  
+                <h:outputLabel class="control-label col-sm-2" for="add"/>
+                <div class="col-sm-4">
+                    <h:commandButton type="submit" class="btn btn-info"
+                                     value="Add Author" action="#{authorController.addAuthor()}"/>
+                </div>
+            </div>
+            <!-- PUBLISHER INFORMATION -->
+             <div class="form-group">
+                <h:outputLabel value="Publisher Name :" class="control-label col-sm-2"/>
+                <div class="col-sm-4">
+                    <h:inputText value="#{publisherController.name}" styleClass="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">  
+                <h:outputLabel class="control-label col-sm-2" for="add"/>
+                <div class="col-sm-4">
+                    <h:commandButton type="submit" class="btn btn-info"
+                                     value="Add Publisher" action="#{publisherController.addPublisher()}"/>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>

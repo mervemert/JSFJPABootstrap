@@ -1,0 +1,8 @@
+domain\User_.class
+controller\UserController.class
+service\UserService.class
+util\Utility.class
+dao\UserDAO.class
+domain\User.class
+dao\UserDAOImpl.class
+service\UserServiceImpl.class
